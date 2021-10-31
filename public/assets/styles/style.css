@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.title-logo {
+  height: 100%;
+  width: auto;
+}
+
+.title-text {
+  font-size: 2em;
+  padding: 20px;
+}
+
+.cookie-preview {
+  margin: 10 auto;
+  width: 200px;
+  height: 204px;
+}

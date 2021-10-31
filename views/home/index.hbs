@@ -1,0 +1,23 @@
+<h2>Select your cookie base:</h2>
+<ul>
+  {{> base-selector}}
+</ul>
+<hr>
+
+<h2>Select your favorite addons:</h2>
+<ul>
+  {{#each addons}}
+    {{#if (isNotInArray @root.cookie.addons this.[0])}}
+      <li><a href="/configurator/add-addon/{{this.[0]}}" >Add {{this.[0]}} for {{pricify this.[1]}} PLN</a></li>
+    {{/if}}
+  {{/each}}
+</ul>
+<hr>
+<h2>Your cookie:</h2>
+{{#if cookie.base}}
+  {{> cookie-preview}}
+  {{> addons}}
+{{else}}
+  <p><strong>To see preview of your cookie and price summary, start with selecting cookie base.</strong></p>
+  {{> base-selector}}
+{{/if}}

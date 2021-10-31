@@ -6,7 +6,7 @@
     {{pricify (find-price bases cookie.base)}}
     PLN</li>
   {{#each cookie.addons}}
-    <li>Addon: {{this}} - {{pricify (find-price @root.addons this)}} <a href="/configurator/remove-addon/{{this}}">Remove</a></li>
+    <li>Addon: {{this}} - {{pricify (find-price @root.addons this)}} PLN<a href="/configurator/remove-addon/{{this}}" class="btn btn-small">Remove</a></li>
   {{/each}}
 </ul>
 <p><strong>Total of {{pricify sum}} PLN</strong></p>

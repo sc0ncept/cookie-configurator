@@ -1,18 +1,13 @@
 <h2>Select your cookie base:</h2>
-<ul>
-  {{> base-selector}}
-</ul>
+{{> base-selector}}
 <hr>
 
 <h2>Select your favorite addons:</h2>
-<ul>
-  {{#each addons}}
-    {{#if (isNotInArray @root.cookie.addons this.[0])}}
-      <li><a href="/configurator/add-addon/{{this.[0]}}" >Add {{this.[0]}} for {{pricify this.[1]}} PLN</a></li>
-    {{/if}}
-  {{/each}}
-</ul>
+{{#each addons}}
+    <a href="/configurator/add-addon/{{this.[0]}}" class="btn {{#if (isInArray @root.cookie.addons this.[0])}}btn-disabled{{/if}}">Add {{this.[0]}} for {{pricify this.[1]}} PLN</a>
+{{/each}}
 <hr>
+
 <h2>Your cookie:</h2>
 {{#if cookie.base}}
   {{> cookie-preview}}

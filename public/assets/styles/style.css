@@ -1,4 +1,8 @@
 body {
+  box-sizing: border-box;
+  min-width: 400px;
+  max-width: 900px;
+  margin: 10px auto;
   text-align: center;
 }
 
@@ -7,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100px;
+  padding: 5px 10px;
 }
 
 .title-logo {
@@ -20,7 +25,48 @@ body {
 }
 
 .cookie-preview {
-  margin: 10 auto;
+  margin: 10px auto;
   width: 200px;
   height: 204px;
+}
+
+.error {
+  max-width: 760px;
+  margin: 1em auto;
+  padding: 1em;
+  border: 1px solid indianred;
+  background-color: #ffa3a3;
+}
+
+.btn {
+  display: inline-block;
+  width: 300px;
+  margin: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  background: #c7c0c0;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  line-height: 40px;
+  transition: .2s;
+}
+
+.btn-small {
+  display: inline;
+  margin: 5px;
+  padding: 2px 5px;
+  line-height: 25px;
+}
+
+.btn:hover {
+  background: #983636;
+  color: white;
+}
+
+.btn-disabled {
+  pointer-events: none;
+  background-color: #eae0e0;
+  color: #989898;
 }

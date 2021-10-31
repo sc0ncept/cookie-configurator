@@ -10,6 +10,7 @@ const handlebarsHelpers = {
   pricify: (price) => price.toFixed(2),
 
   isNotInArray: (array, item) => !array.includes(item),
+  isInArray: (array, item) => array.includes(item),
 };
 
 module.exports = {

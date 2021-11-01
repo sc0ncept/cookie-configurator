@@ -1,6 +1,6 @@
 const COOKIE_BASES = {
-  light: 4,
-  dark: 6,
+  light: 5,
+  dark: 5,
 };
 
 const COOKIE_ADDONS = {
